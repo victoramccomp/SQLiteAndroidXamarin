@@ -11,7 +11,7 @@
         android:layout_height="80dp"
         android:gravity="center" />
     <TextView
-        android:text="Incoming"
+        android:text="USA Stock Capital"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginTop="80dp"
@@ -19,38 +19,26 @@
         android:gravity="center" />
     <EditText
         android:text=""
-        android:numeric="integer"
-        android:inputType="number"
-        android:id="@+id/txtincoming"
+        android:id="@+id/txtresult"
         android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
         android:layout_alignParentRight="true"
+        android:editable="false"
         android:gravity="center" />
-    <TextView
-        android:text="Expenditures"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginRight="80dp"
-        android:gravity="center" />
-    <EditText
-        android:text=""
-        android:numeric="integer"
-        android:inputType="number"
-        android:id="@+id/txtexpenditures"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="180dp"
-        android:layout_alignParentRight="true"
-        android:gravity="center" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imgflag"
+        android:src="@drawable/usa"
+        android:scaleType="fitCenter" />
     <Button
-        android:text="Calc"
-        android:id="@+id/btncalc"
-        android:background="#000000"
+        android:text="Exit"
+        android:id="@+id/btnexit"
+        android:background="#FFFF1111"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="400dp"
         android:layout_centerHorizontal="true"
         android:gravity="center" />
 </RelativeLayout>
