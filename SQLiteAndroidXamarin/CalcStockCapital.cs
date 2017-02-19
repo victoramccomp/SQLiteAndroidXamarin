@@ -5,7 +5,7 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 
-namespace PatrinomioAndroidXamarin
+namespace SQLiteAndroidXamarin
 {
     [Activity(Label = "CalcStockCapital")]
     public class CalcStockCapital : Activity

@@ -3,7 +3,7 @@ using Android.Widget;
 using Android.OS;
 using Android.Content;
 
-namespace PatrinomioAndroidXamarin
+namespace SQLiteAndroidXamarin
 {
     [Activity(MainLauncher = true, Icon = "@drawable/usaicon")]
     public class MainActivity : Activity
