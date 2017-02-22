@@ -1,8 +1,10 @@
 using System;
+using System.IO;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
+using SQLite;
 
 namespace SQLiteAndroidXamarin
 {
@@ -24,6 +26,20 @@ namespace SQLiteAndroidXamarin
             {
                 txtResult.Text = Intent.GetDoubleExtra("result", defaultValue).ToString();
                 imgFlag.SetImageResource(Resource.Drawable.usa);
+
+                var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                path = Path.Combine(path, "Base.db3");
+                var conn = new SQLiteConnection(path);
+
+                var elements = from s in conn.Table<Information>()
+                               select s;
+
+                foreach (var item in elements)
+                {
+                    Toast.MakeText(this, item.IncomingUSA.ToString(), ToastLength.Short).Show();
+                    Toast.MakeText(this, item.ExpenditureUSA.ToString(), ToastLength.Short).Show();
+                }
+
             }
             catch (Exception ex)
             {
