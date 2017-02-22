@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System.IO;
+using SQLite;
+using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Content;
@@ -12,6 +14,11 @@ namespace SQLiteAndroidXamarin
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
+
+
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "Base.db3");
+            var conn = new SQLiteConnection(path);
 
             Button btnCalc = FindViewById<Button>(Resource.Id.btncalc);
             EditText txtIncoming = FindViewById<EditText>(Resource.Id.txtincoming);
